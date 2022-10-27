@@ -10,7 +10,7 @@ import java.net.Socket;
  * @author peter
  */
 public class Client {
-     public void connection(String text) throws Exception
+     public String connection(String text) throws Exception
     {
         String sentence_to_server;
         String sentence_from_server;
@@ -41,10 +41,12 @@ public class Client {
         sentence_from_server = inFromServer.readLine();
     
         //print kết qua ra màn hình
-        System.out.println("FROM SERVER: " + sentence_from_server);
+//        System.out.println("FROM SERVER: " + sentence_from_server);
+        
     
         //Đóng liên kết socket
-        clientSocket.close();    
+//        clientSocket.close();    
+        return sentence_from_server;
     } 
 
 }
